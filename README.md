@@ -308,8 +308,8 @@ Minimum viable: any CUDA GPU with 24GB+ VRAM with 4-bit quantization. For Gemma 
 @article{abuayyash2026brainstacks,
   title={Brainstacks: Cross-Domain Cognitive Capabilities via Frozen MoE-LoRA Stacks for Continual LLM Learning},
   author={Abu Ayyash, Mohammad R.},
-  year={2026},
-  institution={Brains Build Research}
+  journal={arXiv preprint arXiv:2604.01152},
+  year={2026}
 }
 ```
 
