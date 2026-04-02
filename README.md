@@ -5,6 +5,7 @@
 Mohammad R. Abu Ayyash - [Brains Build Research](https://github.com/achelousace), Ramallah, Palestine.
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](Paper/brainstacks_paper.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-2604.01152-b31b1b.svg)](https://arxiv.org/abs/2604.01152)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![alt text](Paper/figures/title_image.png)
 
