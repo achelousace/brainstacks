@@ -7,6 +7,7 @@ Mohammad R. Abu Ayyash - [Brains Build Research](https://github.com/achelousace)
 [![Paper](https://img.shields.io/badge/Paper-PDF-red)](Paper/brainstacks_paper.pdf)
 [![arXiv](https://img.shields.io/badge/arXiv-2604.01152-b31b1b.svg)](https://arxiv.org/abs/2604.01152)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Models](https://img.shields.io/badge/🤗_HuggingFace-Models-orange)](https://huggingface.co/MohammadAbuAyyash/brainstacks-gemma3-12b-it)
 ![alt text](Paper/figures/title_image.png)
 
 ---
@@ -209,7 +210,7 @@ Each `MoELoRADelta` stack contains 4 LoRA experts (rank 16) with noisy top-2 rou
 5. During training: δ_projected = δ - δ · P
 ```
 
-For Gemma 3 12B (h_dim=3840), each domain claiming 64 directions uses 1.7% of the space. 50+ domains can coexist before capacity concerns arise.
+For Gemma 3 12B IT (h_dim=3840), each domain claiming 64 directions uses 1.7% of the space. 50+ domains can coexist before capacity concerns arise.
 
 ### Outcome-Based Router
 
@@ -299,7 +300,7 @@ All training data is preprocessed through `strip_chat_tokens()` to remove chat t
 ## Hardware
 
 Validated on:
-- **Google Colab G4** (NVIDIA A100, 96GB) - primary development
+- **Google Colab G4** (96GB) - primary development
 
 Minimum viable: any CUDA GPU with 24GB+ VRAM with 4-bit quantization. For Gemma 3 12B: 48GB+ recommended.
 
@@ -313,6 +314,13 @@ Minimum viable: any CUDA GPU with 24GB+ VRAM with 4-bit quantization. For Gemma 
   year={2026}
 }
 ```
+## Fine-tunned Stacks (Hugging Face)
+
+The trained domain stacks and meta-router for Gemma 3 12B IT are available on the Hugging Face Hub:
+
+🤗 **[brainstacks-gemma3-12b-it](https://huggingface.co/MohammadAbuAyyash/brainstacks-gemma3-12b-it)**
+
+Includes all 10 domain stacks (5 domains × 2 residual rounds), meta-router weights, manifest, and full training/inference/evaluation code. Note: these are custom MoE-LoRA state dicts, not standard PEFT adapters — the repo includes all loading code needed.
 
 ## License
 
